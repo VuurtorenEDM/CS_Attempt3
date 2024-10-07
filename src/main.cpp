@@ -2,7 +2,6 @@
 
 // test
 // put function declarations here:
-int Multiplication();
 
 void setup() 
 {  
