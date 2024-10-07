@@ -1,19 +1,41 @@
 #include <Arduino.h>
 
-// test
-// put function declarations here:
-int myFunction(int, int);
+// Function declarations
+void showMenu();
+void Multiplication();
 
 void setup() {
-  // put your setup code here, to run once: please heckin work
-  int result = myFunction(2, 3);
+  // Start
+  Serial.begin(6000);
+  
+  // Show the menu
+  showMenu();
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  if (Serial.available() > 0) {
+    // Read the user input
+    char option = Serial.read();
+    
+    // Check option
+    switch (option) {
+      case '1':
+        calculateSum();
+        break;
+      case '2':
+        Multiplication();
+        break;
+      default:
+        Serial.println("Invalid option. 1 or 2.");
+        showMenu();  // Show the menu again if its invalid
+        break;
+    }
+  }
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+// display the menu
+void showMenu() {
+  Serial.println("1: Calculate Sum");
+  Serial.println("2: Calculate Multiplication");
+  Serial.println("1 or 2? ");
 }
