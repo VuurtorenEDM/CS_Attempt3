@@ -3,6 +3,7 @@
 // Function declarations
 void showMenu();
 void Multiplication();
+void Sum();
 
 void setup() {
   // Start
