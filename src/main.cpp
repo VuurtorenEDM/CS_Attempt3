@@ -1,5 +1,6 @@
 #include <Arduino.h>
 
+<<<<<<< HEAD
 // Function declarations
 void showMenu();
 void Multiplication();
@@ -38,4 +39,18 @@ void showMenu() {
   Serial.println("1: Calculate Sum");
   Serial.println("2: Calculate Multiplication");
   Serial.println("1 or 2? ");
+}
+// Multiplication Function
+int Multiplication() 
+{
+  // get 2 integers from input, return the numbers
+  Serial.println("Please Provide the First Number: ");
+  int num1 = Serial.parseInt();
+  Serial.println("Please Provide the Second Number: ");
+  int num2 = Serial.parseInt();
+  int Multiplied = num1 * num2;
+  Serial.print("The Result Is: ");
+  Serial.println(Multiplied);
+
+  showmenu();
 }
