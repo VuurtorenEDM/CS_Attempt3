@@ -2,20 +2,29 @@
 
 // test
 // put function declarations here:
-int myFunction(int, int);
+int Multiplication();
 
-void setup() {
-  // put your setup code here, to run once: please heckin work
-  int result = myFunction(2, 3);
+void setup() 
+{  
+Serial.begin(9600);
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+void loop() 
+{
+ Multiplication();
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+// Multiplication Function
+void Multiplication() 
+{
+  // get 2 integers from input, return the numbers
+  Serial.println("Please Provide the First Number: ");
+  int num1 = Serial.parseInt();
+  Serial.println("Please Provide the Second Number: ");
+  int num2 = Serial.parseInt();
+  int Multiplied = num1 * num2;
+  Serial.print("The Result Is: ");
+  Serial.println(Multiplied);
+
+  showmenu();
 }
-
-
