@@ -40,6 +40,20 @@ void showMenu() {
   Serial.println("2: Calculate Multiplication");
   Serial.println("1 or 2? ");
 }
+=======
+// test
+// put function declarations here:
+
+void setup() 
+{  
+Serial.begin(9600);
+}
+
+void loop() 
+{
+ Multiplication();
+}
+
 // Multiplication Function
 int Multiplication() 
 {
@@ -54,3 +68,6 @@ int Multiplication()
 
   showmenu();
 }
+
+
+>>>>>>> origin/master
