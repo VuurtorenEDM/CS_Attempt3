@@ -1,21 +1,14 @@
-#include <Arduino.h>
+// Multiplication Function
+void Multiplication() 
+{
+  // get 2 integers from input, return the numbers
+  Serial.println("Please Provide the First Number: ");
+  int num1 = Serial.parseInt();
+  Serial.println("Please Provide the Second Number: ");
+  int num2 = Serial.parseInt();
+  int Multiplied = num1 * num2;
+  Serial.print("The Result Is: ");
+  Serial.println(Multiplied);
 
-// test
-// put function declarations here:
-int myFunction(int, int);
-
-void setup() {
-  // put your setup code here, to run once: please heckin work
-  int result = myFunction(2, 3);
+  showmenu();
 }
-
-void loop() {
-  // put your main code here, to run repeatedly:
-}
-
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
-}
-
-
