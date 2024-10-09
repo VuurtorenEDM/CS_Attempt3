@@ -1,5 +1,7 @@
 #include <Arduino.h>
 
+int ledpin = 13;
+
 void showMenu();
 void Multiplication();
 void Blink();
@@ -49,6 +51,14 @@ void showMenu() {
 
 }
 
+void Blink() 
+{
+  digitalWrite(ledpin, HIGH);
+  delay(1000);
+  digitalWrite(ledpin, LOW);
+  delay(1000);
+}
+
 // Multiplication Function
 void Multiplication() 
 {
@@ -63,4 +73,3 @@ void Multiplication()
 
   showmenu();
 }
-
