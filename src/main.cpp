@@ -1,6 +1,5 @@
 #include <Arduino.h>
 
-// Function declarations
 void showMenu();
 void Multiplication();
 void Blink();
@@ -20,6 +19,7 @@ void setup() {
 void loop() 
 {
   Blink();
+
 
   if (Serial.available() > 0) {
     // Read the user input
@@ -46,4 +46,6 @@ void showMenu() {
   Serial.println("1: Calculate Sum");
   Serial.println("2: Calculate Multiplication");
   Serial.println("1 or 2? ");
+
 }
+
