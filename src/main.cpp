@@ -3,16 +3,24 @@
 // Function declarations
 void showMenu();
 void Multiplication();
+void Blink();
 
 void setup() {
   // Start
   Serial.begin(6000);
 
+  // blink pinmode
+  pinMode(ledpin, OUTPUT);
+
   // Show the menu
   showMenu();
 }
 
-void loop() {
+
+void loop() 
+{
+  Blink();
+
   if (Serial.available() > 0) {
     // Read the user input
     char option = Serial.read();
