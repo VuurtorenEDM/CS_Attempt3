@@ -3,9 +3,9 @@
 int ledpin = 13;
 
 void showMenu();
+void Sum();
 void Multiplication();
 void Blink();
-void Sum();
 
 void setup() 
 {
@@ -49,7 +49,6 @@ void loop()
 // display the menu
 void showMenu() 
 {
-  Blink();
   Serial.println("1: Calculate Sum");
   Serial.println("2: Calculate Multiplication");
   Serial.println("1 or 2? ");
@@ -92,6 +91,7 @@ void Sum()
   delay(1500);
 
   showMenu();
+
 }
 
 // Multiplication Function
