@@ -3,16 +3,6 @@
 // test
 int ledpin = 13;
 
-void setup()
-{
-  pinMode(ledpin, OUTPUT);
-}
-
-void loop()
-{
-  Blink();
-}
-
 // put function definitions here:
 void Blink() 
 {
