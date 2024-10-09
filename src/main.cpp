@@ -3,22 +3,21 @@
 // test
 int ledpin = 13;
 
-int myFunction(int, int);
-
 void setup()
 {
-  pinmode(ledpin, OUTPUT);
+  pinMode(ledpin, OUTPUT);
 }
 
 void loop()
 {
-  myFunction();
+  Blink();
 }
 
 // put function definitions here:
-int myFunction(int x, int y) {
-  digitalwrite(ledpin, HIGH);
+void Blink() 
+{
+  digitalWrite(ledpin, HIGH);
   delay(1000);
-  digitalwrite(ledpin, LOW);
+  digitalWrite(ledpin, LOW);
   delay(1000);
 }
