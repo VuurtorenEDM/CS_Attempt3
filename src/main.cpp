@@ -5,6 +5,7 @@ int ledpin = 13;
 void showMenu();
 void Multiplication();
 void Blink();
+void Sum();
 
 void setup() {
   // Start
@@ -57,6 +58,16 @@ void Blink()
   delay(1000);
   digitalWrite(ledpin, LOW);
   delay(1000);
+}
+
+//used to make a sum of two numbers 
+void Sum() 
+{
+  Serial.println("Provide the first number: ");
+  int x = Serial.parseInt();
+  
+  Serial.println("Provide the second number: ");
+  int y = Serial.parseInt();
 }
 
 // Multiplication Function
